@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>90-Day Winter Arc</title>
+<style>
+:root{--bg:#fff;--ink:#17171b;--mute:#74747c;--line:#dcdce1;--red:#8b1a1a;--tint:#f7efef;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131316;--ink:#ececf0;--mute:#9b9ba4;--line:#32323a;--red:#d24b4b;--tint:#221a1a}}
+:root[data-theme="dark"]{--bg:#131316;--ink:#ececf0;--mute:#9b9ba4;--line:#32323a;--red:#d24b4b;--tint:#221a1a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:12px/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif}
+.wrap{overflow-x:auto}
+.sheet{width:396mm;padding:6mm 12mm;margin:0 auto;box-sizing:content-box}
+header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.7mm solid var(--red);padding-bottom:3mm}
+h1{margin:0;font-size:10mm;line-height:1;letter-spacing:.14em;font-weight:800}
+h1 em{font-style:normal;color:var(--red)}
+.sub{margin-top:2mm;color:var(--mute);letter-spacing:.18em;font-size:3mm}
+.stats{display:flex;gap:9mm;text-align:right}
+.stat{font-size:2.7mm;color:var(--mute);letter-spacing:.08em}
+.stat b{display:block;font-size:7mm;color:var(--red);letter-spacing:0}
+.main{display:grid;grid-template-columns:282mm 1fr;gap:8mm;margin-top:4mm}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.phase{font-size:3mm;font-weight:700;color:var(--red);letter-spacing:.12em;margin-bottom:1mm}
+.phase span{color:var(--mute);font-weight:400;letter-spacing:.04em}
+table{border-collapse:collapse;width:100%;table-layout:fixed}
+th,td{padding:0;text-align:center}
+col.d{width:11mm}col.b{width:5.5mm}col.w{width:10.5mm}
+th.c{font-size:2mm;letter-spacing:.06em;color:var(--red);border-bottom:.3mm solid var(--red);white-space:nowrap;font-weight:700;padding-bottom:.4mm}
+th.v{height:22mm;vertical-align:bottom}
+th.v span{display:inline-block;writing-mode:vertical-rl;transform:rotate(180deg);font-size:2.5mm;font-weight:600;color:var(--mute);white-space:nowrap;padding-bottom:1mm}
+td{height:6.3mm;border-bottom:.2mm solid var(--line)}
+tr.w td{border-bottom:.35mm solid var(--ink)}
+td.d{text-align:left;padding-left:1mm;font-weight:700;font-size:3mm;white-space:nowrap}
+td.d small{font-weight:400;color:var(--mute);font-size:2mm;margin-left:.6mm}
+input[type=checkbox]{-webkit-appearance:none;appearance:none;width:4mm;height:4mm;margin:0;vertical-align:middle;border:.3mm solid var(--mute);border-radius:.7mm;background:transparent;cursor:pointer}
+input[type=checkbox]:checked{background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.2l2.1 2.1L8 3' fill='none' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E") center/80% no-repeat;border-color:var(--red)}
+input[type=checkbox]:focus-visible,input.t:focus-visible{outline:2px solid var(--red);outline-offset:1px}
+input.t{width:100%;box-sizing:border-box;border:0;border-bottom:.2mm solid var(--line);background:transparent;color:inherit;font:inherit;font-size:2.9mm;text-align:center;padding:0;height:4.5mm}
+.side h2{margin:0 0 2mm;font-size:3.2mm;letter-spacing:.14em;color:var(--red)}
+.side section{margin-bottom:4mm}
+.key{display:grid;grid-template-columns:24mm 1fr;gap:.9mm 2mm;font-size:2.8mm}
+.key b{font-weight:700}.key span{color:var(--mute)}
+.targets{display:flex;justify-content:space-between;background:var(--tint);border-left:.9mm solid var(--red);padding:2.2mm 3mm;margin-bottom:5mm;font-size:2.9mm}
+.targets b{display:block;font-size:4mm;color:var(--red)}
+.wk th{font-size:2.5mm;color:var(--mute);font-weight:600;padding-bottom:1mm;vertical-align:bottom}
+.wk td{height:6.4mm}.wk td.d{font-size:2.9mm}.wk th{font-size:2.2mm;line-height:1.1}.dl{font-size:2.8mm;font-weight:700;color:var(--red)}
+.tr{display:block;width:100%;height:34mm;margin-top:3mm}
+.rv{display:grid;grid-template-columns:30mm 1fr;align-items:end;gap:1mm 2mm;font-size:2.9mm;margin-top:1mm}
+.rv label{color:var(--mute)}
+.rv input.t{text-align:left;height:5.6mm}
+.foot{margin-top:5mm;text-align:center;font-size:3mm;letter-spacing:.18em;color:var(--mute);border-top:.2mm solid var(--line);padding-top:2.5mm}
+.foot b{color:var(--red)}
+@page{size:A3 landscape;margin:0}
+@media print{
+:root{--bg:#fff;--ink:#17171b;--mute:#74747c;--line:#dcdce1;--red:#8b1a1a;--tint:#f7efef}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.wrap{overflow:visible}.sheet{margin:0}
+}
+</style></head>
+<body><div class="wrap"><div class="sheet">
+<header>
+<div><h1>90-DAY <em>WINTER ARC</em></h1><div class="sub">PERSONAL TRANSFORMATION CHALLENGE · START 04 OCT 2026 · DAY 90 ON 01 JAN 2027</div></div>
+<div class="stats"><div class="stat"><b id="solid">0</b>SOLID DAYS</div><div class="stat"><b id="ticks">0</b>BOXES TICKED</div><div class="stat"><b>63.5</b>START KG</div><div class="stat"><b>67</b>TARGET KG</div></div>
+</header>
+<div class="main">
+<div class="days" id="days"></div>
+<aside class="side">
+<div class="targets"><div><b>2,500</b>kcal (flexible)</div><div><b>100 g+</b>protein</div><div><b>2.5–3 L</b>water</div><div><b>4–5×</b>gym / week</div></div>
+<section><h2>DAILY KEY</h2><div class="key">
+<b>Breakfast</b><span>Overnight oats, 7g yogurt, milk, banana. Protein-rich.</span>
+<b>Lunch</b><span>PB protein-bread sandwich, 4 eggs, fruit.</span>
+<b>Pre-workout</b><span>Banana, 250ml milk, 1 scoop whey (6:30–7 PM).</span>
+<b>Dinner</b><span>4 rotis, sabzi, salad + a protein source.</span>
+<b>Protein</b><span>Tick when you land roughly 100g or more.</span>
+<b>Water</b><span>2.5–3 L through the day.</span>
+<b>Gym / Rest</b><span>Gym done, or a planned recovery day.</span>
+<b>AM skin</b><span>Facewash, vitamin C, moisturiser, sunscreen. Brush.</span>
+<b>PM skin</b><span>Facewash after gym, moisturiser.</span>
+<b>Teeth night</b><span>Brush ~2 minutes. Never skip.</span>
+<b>Sleep</b><span>7–9 hours.</span>
+<b>Productive</b><span>One thing for your future or career.</span>
+</div></section>
+<section><h2>WEEKLY TARGETS &amp; WEIGHT TREND</h2><table class="wk" id="wk"></table><svg class="tr" id="tr" viewBox="0 0 106 32" role="img" aria-label="Weight trend"></svg>
+<div class="rv" style="margin-top:3mm"><label>Face pack (optional)</label><div id="fp" style="display:flex;gap:2mm"></div></div></section>
+<section><h2>REVIEW PROMPTS</h2><div class="rv" id="rv"></div></section>
+</aside>
+</div>
+<div class="foot"><b>CONSISTENCY</b> OVER PERFECTION. MISS A DAY, NEVER MISS TWICE.</div>
+</div></div>
+<script>
+var C=[["N","Breakfast"],["N","Lunch"],["N","Pre-workout"],["N","Dinner"],["N","Protein 100g+"],["N","Water 2.5–3L"],["G","Gym / Rest"],["S","AM skin"],["S","PM skin"],["S","Teeth night"],["Z","Sleep 7–9h"],["F","Productive"]];
+var CATS=[["NUTRITION",6],["GYM",1],["SKIN & HYGIENE",3],["SLEEP",1],["FOCUS",1]];
+var PH=[["DAYS 1–30","Foundation"],["DAYS 31–60","Build"],["DAYS 61–90","Peak"]];
+var S={};try{S=JSON.parse(localStorage.getItem("wa90")||"{}")}catch(e){}
+function cb(k){return '<input type="checkbox" data-k="'+k+'" aria-label="'+k+'">'}
+function tx(k,l){return '<input class="t" data-k="'+k+'" aria-label="'+(l||k)+'">'}
+var MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function dt(d){var x=new Date(Date.UTC(2026,9,4)+(d-1)*864e5);return x.getUTCDate()+" "+MO[x.getUTCMonth()]}
+var h="";
+for(var b=0;b<3;b++){
+ h+='<div><div class="phase">'+PH[b][0]+' <span>'+PH[b][1]+'</span></div><table><colgroup><col class="d">'+'<col class="b">'.repeat(12)+'<col class="w"></colgroup><thead><tr><th></th>';
+ CATS.forEach(function(c){h+='<th class="c" colspan="'+c[1]+'">'+c[0]+'</th>'});
+ h+='<th></th></tr><tr><th></th>';
+ C.forEach(function(c){h+='<th class="v"><span>'+c[1]+'</span></th>'});
+ h+='<th class="v"><span>Weight kg</span></th></tr></thead><tbody>';
+ for(var i=1;i<=30;i++){var d=b*30+i;
+  h+='<tr'+(d%7==1?' class="w"':'')+'><td class="d">'+d+'<small>'+dt(d)+'</small></td>';
+  for(var c=0;c<12;c++)h+='<td>'+cb("d"+d+"-"+c)+'</td>';
+  h+='<td>'+tx("d"+d+"-w","Day "+d+" weight")+'</td></tr>';}
+ h+='</tbody></table></div>';}
+document.getElementById("days").innerHTML=h;
+var w='<colgroup><col style="width:18mm"><col style="width:26mm"><col style="width:26mm"><col style="width:36mm"></colgroup><thead><tr><th></th><th>Gym 4–5×<br>done</th><th>Skill progress<br>happy</th><th>Weight kg<br>(start of week)</th></tr></thead><tbody>';
+for(var k=1;k<=12;k++){w+='<tr><td class="d">W'+k+'<small>'+dt(2+(k-1)*7)+'</small></td><td>'+cb("wgy"+k)+'</td><td>'+cb("wsk"+k)+'</td><td>'+tx("wt"+k,"Week "+k+" weight")+'</td></tr>';}
+document.getElementById("wk").innerHTML=w+'</tbody>';
+var f="";for(var q=0;q<6;q++)f+=cb("fp"+q);document.getElementById("fp").innerHTML=f;
+var R=["Consistency (out of 10)","Gym progress","Appearance / grooming","Wins this week","Next week's focus"],r="";
+R.forEach(function(t,i){r+='<label>'+t+'</label>'+tx("rv"+i,t)});
+document.getElementById("rv").innerHTML=r;
+function trend(){var pts=[[0,63.5]];
+ for(var k=1;k<=12;k++){var v=parseFloat(S["wt"+k]);if(!isNaN(v))pts.push([k,v])}
+ var ys=pts.map(function(p){return p[1]}),last=ys[ys.length-1],mn=Math.min(63,Math.min.apply(null,ys))-.2,mx=Math.max(67.5,Math.max.apply(null,ys));
+ function X(k){return 10+k/12*92}function Y(v){return 26-(v-mn)/(mx-mn)*22}
+ var o='<line x1="10" x2="102" y1="'+Y(67)+'" y2="'+Y(67)+'" style="stroke:var(--red)" stroke-width=".3" stroke-dasharray="1 1"/>';
+ o+='<line x1="'+X(0)+'" y1="'+Y(63.5)+'" x2="'+X(12)+'" y2="'+Y(67)+'" style="stroke:var(--mute)" stroke-width=".3" stroke-dasharray="1.2 1"/>';
+ o+='<polyline fill="none" style="stroke:var(--red)" stroke-width=".7" points="'+pts.map(function(p){return X(p[0])+","+Y(p[1])}).join(" ")+'"/>';
+ pts.forEach(function(p){o+='<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="1" style="fill:var(--red)"/>'});
+ o+='<text x="0" y="'+(Y(67)+.9)+'" font-size="2.6" style="fill:var(--red)">67</text><text x="0" y="'+(Y(63.5)+.9)+'" font-size="2.6" style="fill:var(--mute)">63.5</text>';
+ [[0,"Start"],[4,"W4"],[8,"W8"],[12,"W12"]].forEach(function(t){o+='<text x="'+X(t[0])+'" y="31" text-anchor="middle" font-size="2.5" style="fill:var(--mute)">'+t[1]+'</text>'});
+ o+='<text x="106" y="2.6" text-anchor="end" font-size="2.6" style="fill:var(--mute)">Target 67 kg · Latest '+last+' kg</text>';
+ document.getElementById("tr").innerHTML=o}
+function stats(){var s=0,t=0;
+ for(var d=1;d<=90;d++){var n=0;for(var c=0;c<12;c++)if(S["d"+d+"-"+c])n++;t+=n;if(n>=10)s++}
+ document.getElementById("solid").textContent=s;document.getElementById("ticks").textContent=t;trend()}
+document.querySelectorAll("[data-k]").forEach(function(e){
+ var k=e.dataset.k;
+ if(e.type==="checkbox")e.checked=!!S[k];else e.value=S[k]||"";
+ e.addEventListener("change",function(){S[k]=e.type==="checkbox"?e.checked:e.value;
+  try{localStorage.setItem("wa90",JSON.stringify(S))}catch(x){}stats()});
+ if(e.type!=="checkbox")e.addEventListener("input",function(){S[k]=e.value;
+  try{localStorage.setItem("wa90",JSON.stringify(S))}catch(x){}stats()});
+});
+stats();
+</script></body></html>
