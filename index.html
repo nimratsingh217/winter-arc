@@ -2,6 +2,11 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>90-Day Winter Arc</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#070a10">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Winter Arc">
 <style>
 :root{--bg:#fff;--ink:#17171b;--mute:#74747c;--line:#dcdce1;--red:#8b1a1a;--tint:#f7efef;--card:transparent;--cardb:transparent;--pad:0mm;--bw:0px;--c0:#8b1a1a;--c1:#8b1a1a;--c2:#8b1a1a;--c3:#8b1a1a;--c4:#8b1a1a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme="dark"]{--bg:#070a10;--ink:#e8ecf4;--mute:#8d97a9;--line:#222c3c;--red:#3dd6c3;--tint:#0f1b25;--card:#0e141f;--cardb:#1b2638;--pad:2.5mm;--bw:1px;--c0:#2fd1b0;--c1:#4ade80;--c2:#5b8cff;--c3:#b07cff;--c4:#ff6b8b}
@@ -103,23 +108,46 @@ tr.c0{--a:var(--c0)}tr.c1{--a:var(--c1)}tr.c2{--a:var(--c2)}tr.c3{--a:var(--c3)}
 .pst{display:flex;justify-content:space-between;margin-top:22px;padding:12px 14px;background:var(--tint);border-left:4px solid var(--red);font-size:12px;color:var(--mute)}
 .pst b{display:block;font-size:24px;color:var(--red)}
 .ph-ft{display:flex;gap:10px;margin-top:20px}.ph-ft button{flex:1;padding:12px;border-radius:24px;letter-spacing:.1em;font-size:13px}
+.adb{align-self:center;font:inherit;font-size:2.4mm;letter-spacing:.12em;padding:1.6mm 3.2mm;border:.3mm solid var(--red);border-radius:5mm;background:transparent;color:var(--red);cursor:pointer}
+#adov{position:fixed;inset:0;z-index:50;background:#000}
+#adov iframe{width:100%;height:100%;border:0;display:block}
+#adx{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:2;font:inherit;font-size:13px;letter-spacing:.1em;padding:8px 16px;border:0;border-radius:20px;background:#ffffff22;color:#fff;cursor:pointer}
+.ph-r{display:flex;gap:8px;align-items:center}
+#ph-ad{height:40px;border-radius:20px;padding:0 14px;font-size:13px;letter-spacing:.1em}
+.dsa td{height:6.2mm}
+.stb{display:flex;gap:2mm;margin-bottom:2mm}
+.sbn{font:inherit;font-size:2.3mm;font-weight:700;letter-spacing:.12em;padding:1mm 2.4mm;border:.3mm solid var(--line);border-radius:3mm;background:transparent;color:var(--mute);cursor:pointer}
+.sbn.on{color:var(--red);border-color:var(--red)}
+.clk{font-size:15mm;font-weight:800;text-align:center;letter-spacing:.04em;color:var(--red);margin:6mm 0 3mm;font-variant-numeric:tabular-nums}
+.clkb{display:flex;justify-content:center;gap:2.5mm;margin-bottom:6mm}
+.clkb button{font:inherit;font-size:3mm;font-weight:700;letter-spacing:.16em;padding:2mm 5.5mm;border:.35mm solid var(--red);border-radius:6mm;background:transparent;color:var(--red);cursor:pointer}
+.clkb button:disabled{opacity:.35;cursor:default}
+#tst.run{background:var(--red);color:var(--bg)}
+#trs{border-color:var(--line);color:var(--mute)}
+.lbr{display:grid;grid-template-columns:5mm 27mm 1fr 10mm;align-items:center;gap:2mm;height:6.2mm;border-bottom:.2mm solid var(--line);font-size:2.9mm}
+.lbr b{color:var(--mute);font-size:2.8mm}
+.lbr .bt{height:2.6mm;background:var(--line);border-radius:1.3mm;overflow:hidden}.lbr .bt i{display:block;height:100%}
+.lbr .pc{text-align:right;font-weight:700}
+.lbp{margin-top:2.5mm;font-size:2.8mm;color:var(--mute)}.lbp b{color:var(--red)}
+#ph-snd{width:40px;height:40px;border-radius:50%;font-size:16px}
 @page{size:A3 landscape;margin:0}
 @media print{
 :root,:root[data-theme="dark"]{--bg:#fff;--ink:#17171b;--mute:#74747c;--line:#dcdce1;--red:#8b1a1a;--tint:#f7efef;--card:transparent;--cardb:transparent;--pad:0mm;--bw:0px;--c0:#8b1a1a;--c1:#8b1a1a;--c2:#8b1a1a;--c3:#8b1a1a;--c4:#8b1a1a}
 :root[data-theme="dark"] tr{--wl:var(--ink)}
 :root[data-theme="dark"] tr input[type=checkbox]{--ub:var(--mute)}
-.swr{display:none}#thh{display:none}.bk,.tbs,.pbk{display:none}#phone{display:none!important}.wrap{display:block!important}
+.swr{display:none}.adb{display:none}#adov{display:none!important}#thh{display:none}.bk,.tbs,.pbk{display:none}#phone{display:none!important}.wrap{display:block!important}
 body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .wrap{overflow:visible}.sheet{margin:0}
 }
 </style></head>
-<body><div id="phone"><div class="ph-top"><span class="ph-t">90-DAY <em>WINTER ARC</em></span><button id="ph-th" type="button" aria-label="Light or dark">◐</button></div>
+<body><div id="phone"><div class="ph-top"><span class="ph-t">90-DAY <em>WINTER ARC</em></span><span class="ph-r"><button id="ph-snd" type="button" aria-label="Sound on or off">🔊</button><button id="ph-ad" type="button" aria-label="Play ad">▶ AD</button><button id="ph-th" type="button" aria-label="Light or dark">◐</button></span></div>
 <div class="ph-nav"><button id="ph-prev" type="button" aria-label="Previous day">‹</button><div id="ph-day"></div><button id="ph-next" type="button" aria-label="Next day">›</button></div>
 <div id="ph-body"></div><div class="ph-ft"><button id="ph-td" type="button">TODAY</button><button id="ph-full" type="button">FULL GRID</button></div></div>
+<div id="adov" hidden><button id="adx" type="button">✕ CLOSE</button><iframe id="adf" title="Winter Arc ad" allow="autoplay; fullscreen"></iframe></div>
 <div class="wrap"><div class="sheet">
 <header>
 <div><h1>90-DAY <em>WINTER ARC</em></h1><div class="sub">PERSONAL TRANSFORMATION CHALLENGE · START 04 OCT 2026 · DAY 90 ON 01 JAN 2027</div><button class="pbk" id="pbk" type="button">◂ TODAY VIEW</button></div>
-<div class="stats"><div class="stat"><b id="solid">0</b>SOLID DAYS</div><div class="stat"><b id="ticks">0</b>BOXES TICKED</div><div class="stat"><b>63.5</b>START KG</div><div class="stat"><input id="tgt" class="tgt" inputmode="decimal" value="67" aria-label="Target weight in kg">TARGET KG</div><div class="swr"><span>LIGHT</span><div class="sl" id="sl" role="slider" tabindex="0" aria-label="Light to dark theme" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="th" id="th"></i></div><span>DARK</span></div></div>
+<div class="stats"><div class="stat"><b id="solid">0</b>SOLID DAYS</div><div class="stat"><b id="ticks">0</b>BOXES TICKED</div><div class="stat"><b>63.5</b>START KG</div><div class="stat"><input id="tgt" class="tgt" inputmode="decimal" value="67" aria-label="Target weight in kg">TARGET KG</div><button class="adb" id="adb" type="button">▶ PLAY AD</button><button class="adb" id="snd" type="button" aria-label="Sound on or off">🔊</button><div class="swr"><span>LIGHT</span><div class="sl" id="sl" role="slider" tabindex="0" aria-label="Light to dark theme" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="th" id="th"></i></div><span>DARK</span></div></div>
 </header>
 <div class="main">
 <div><div class="days" id="days"></div><section class="wp"><h2>WEEKLY PROGRESS <span id="ovr"></span></h2><svg class="bars" id="bars" viewBox="0 0 282 33" role="img" aria-label="Weekly progress percent"></svg></section></div>
@@ -135,25 +163,31 @@ body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 <b>AM skin</b><span>Facewash, vitamin C, moisturiser, sunscreen. Brush.</span>
 <b>PM skin</b><span>Facewash after gym, moisturiser.</span>
 <b>Teeth night</b><span>Brush ~2 minutes. Never skip.</span>
-<b>Sleep</b><span>7–9 hours.</span>
+<b>No fap</b><span>Stay clean today. Tick at night.</span>
 <b>Productive</b><span>One thing for your future or career.</span>
 <b>DSA</b><span>Solve problems or study DSA today.</span>
 </div></section>
-<section><div class="tbs"><button class="tbn on" data-t="w" type="button">WEEKLY TARGETS</button><button class="tbn" data-t="s" type="button">STREAKS</button><button class="tbn" data-t="d" type="button">DSA</button></div>
+<section><div class="tbs"><button class="tbn on" data-t="w" type="button">WEEKLY TARGETS</button><button class="tbn" data-t="s" type="button">STREAKS</button><button class="tbn" data-t="d" type="button">DSA</button><button class="tbn" data-t="l" type="button">RANKING</button></div>
 <div class="tp" id="tw"><table class="wk" id="wk"></table><svg class="tr" id="tr" viewBox="0 0 106 28" role="img" aria-label="Weight trend"></svg>
 <div class="rv" style="margin-top:3mm"><label>Face pack (optional)</label><div id="fp" style="display:flex;gap:2mm"></div></div></div>
 <div class="tp" id="ts" hidden><div class="scs"><div><b id="cs">0</b>CURRENT STREAK</div><div><b id="bs">0</b>BEST STREAK</div><div><b id="sdn">0</b>SOLID DAYS</div></div><div class="snote" id="sn"></div>
 <table class="wk sm"><colgroup><col style="width:17%"><col style="width:13%"><col style="width:13%"><col style="width:15%"><col style="width:15%"><col style="width:27%"></colgroup><thead><tr><th></th><th>Gym<br>days</th><th>Rest<br>days</th><th>Solid<br>days</th><th>Avg<br>done</th><th>Weight<br>change</th></tr></thead><tbody id="sm"></tbody></table></div>
-<div class="tp" id="td" hidden><div class="scs"><div><b id="dsd">0</b>DSA DAYS (OF 90)</div><div><b id="dsw">0</b>WEEKS LOGGED</div></div><table class="wk dsa" id="dsat"></table></div></section>
+<div class="tp" id="td" hidden><div class="stb"><button class="sbn on" data-s="p" type="button">WEEKLY PROGRESS</button><button class="sbn" data-s="t" type="button">TIMER</button></div>
+<div id="dpp"><div class="scs"><div><b id="dsd">0</b>DSA DAYS (OF 90)</div><div><b id="dsw">0</b>WEEKS LOGGED</div></div><table class="wk dsa" id="dsat"></table></div>
+<div id="dtm" hidden><div class="clk" id="clk">00:00:00</div><div class="clkb"><button id="tst" type="button">START</button><button id="tps" type="button" disabled>PAUSE</button><button id="trs" type="button">RESET</button></div>
+<div class="scs"><div><b id="tmw">0m</b>THIS WEEK</div><div><b id="tma">0m</b>TOTAL</div><div><b id="tmb">0m</b>BEST DAY</div></div>
+<div class="snote">Start before you begin DSA, stop when you are done for the day. The clock shows today's total and is saved to the day you started.</div></div></div>
+<div class="tp" id="tl" hidden><div class="snote" id="lbn"></div><div id="lb"></div><div class="lbp" id="lbp"></div></div>
+</section>
 <section><h2>REVIEW PROMPTS</h2><div class="rv" id="rv"></div></section>
 </aside>
 </div>
 <div class="foot"><b>CONSISTENCY</b> OVER PERFECTION. MISS A DAY, NEVER MISS TWICE.<div class="bk"><button id="ex" type="button">EXPORT</button><button id="im" type="button">IMPORT</button><input type="file" id="imf" accept=".json,application/json" hidden></div></div>
 </div></div>
 <script>
-var C=[["N","Breakfast",0],["N","Lunch",1],["N","Pre-workout",2],["N","Protein 100g+",4],["N","Water 2.5–3L",5],["G","Gym / Rest",6],["S","AM skin",7],["S","PM skin",8],["S","Teeth night",9],["Z","Sleep 7–9h",10],["F","Productive",11],["F","DSA",12]];
+var C=[["N","Breakfast",0],["N","Lunch",1],["N","Pre-workout",2],["N","Protein 100g+",4],["N","Water 2.5–3L",5],["G","Gym / Rest",6],["S","AM skin",7],["S","PM skin",8],["S","Teeth night",9],["Z","No fap",13],["F","Productive",11],["F","DSA",12]];
 var IDS=C.map(function(c){return c[2]});
-var CATS=[["NUTRITION",5],["GYM",1],["SKIN & HYGIENE",3],["SLEEP",1],["SKILLS",2]];
+var CATS=[["NUTRITION",5],["GYM",1],["SKIN & HYGIENE",3],["MIND",1],["SKILLS",2]];
 var PH=[["DAYS 1–30","Foundation"],["DAYS 31–60","Build"],["DAYS 61–90","Peak"]];
 var S={};try{S=JSON.parse(localStorage.getItem("wa90")||"{}")}catch(e){}
 function cb(k){return '<input type="checkbox" data-k="'+k+'" aria-label="'+k+'">'}
@@ -232,7 +266,7 @@ function stats(){var t=0;SD=0;dayCounts();
  document.getElementById("ovr").textContent="· "+Math.round(t/1080*100)+"% overall · drag the dashed line to set your solid-day target";
  var sk=streaks();document.getElementById("cs").textContent=sk[0];document.getElementById("bs").textContent=sk[1];document.getElementById("sdn").textContent=SD;
  document.getElementById("sn").textContent="Solid day = "+THR()+"%+ of 12 boxes. Rest days count as done. Streak = solid days in a row.";
- dsaStats();summary();trend();bars()}
+ dsaStats();summary();trend();bars();board()}
 document.querySelectorAll("[data-k]").forEach(function(e){
  var k=e.dataset.k;
  if(e.type==="checkbox")e.checked=!!S[k];else e.value=S[k]||"";
@@ -266,7 +300,7 @@ function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/"/g,"
 function save(){try{localStorage.setItem("wa90",JSON.stringify(S))}catch(x){}}
 function gset(e){var v=S[e.dataset.g];e.setAttribute("data-s",v===true?"g":v==="R"?"r":"")}
 function syncGrid(){var tgi=document.getElementById("tgt");if(tgi)tgi.value=S.tgt==null?67:S.tgt;document.querySelectorAll("[data-k]").forEach(function(e){var v=S[e.dataset.k];if(e.type==="checkbox")e.checked=!!v;else e.value=v==null?"":v});document.querySelectorAll("[data-g]").forEach(gset)}
-function put(k,v){S[k]=v;save();syncGrid();stats();renderPhone()}
+function put(k,v){S[k]=v;save();syncGrid();stats();renderPhone();if(v)tickSnd(k,v)}
 var gt=null;
 function gcl(){clearTimeout(gt);gt=null}
 function gel(e){return e.target.closest?e.target.closest("[data-g]"):null}
@@ -297,13 +331,70 @@ document.getElementById("ph-th").addEventListener("click",function(){setT(TT<.5?
 document.getElementById("ph-full").addEventListener("click",function(){document.body.classList.add("full")});
 var tg=document.getElementById("tgt");tg.addEventListener("input",function(){S.tgt=tg.value;save();trend()});
 document.getElementById("pbk").addEventListener("click",function(){document.body.classList.remove("full")});
-document.querySelectorAll(".tbn").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".tbn").forEach(function(x){x.classList.toggle("on",x===b)});["w","s","d"].forEach(function(z){document.getElementById("t"+z).hidden=b.dataset.t!==z})})});
+document.querySelectorAll(".tbn").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".tbn").forEach(function(x){x.classList.toggle("on",x===b)});["w","s","d","l"].forEach(function(z){document.getElementById("t"+z).hidden=b.dataset.t!==z})})});
 document.getElementById("ex").addEventListener("click",function(){var b=new Blob([JSON.stringify({app:"winter-arc-90",saved:new Date().toISOString(),data:S},null,1)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="winter-arc-backup-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();a.remove()});
 document.getElementById("im").addEventListener("click",function(){document.getElementById("imf").click()});
 document.getElementById("imf").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var rd=new FileReader();
  rd.onload=function(){try{var j=JSON.parse(rd.result),d=j&&j.data;if(!d||typeof d!=="object")throw 0;
   try{localStorage.setItem("wa90_before_import",JSON.stringify(S))}catch(x){}
   S=d;save();syncGrid();stats();renderPhone()}catch(x){alert("That file is not a valid Winter Arc backup.")}e.target.value=""};rd.readAsText(f)});
+var ADSRC="<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>90-Day Winter Arc \u2013 Ad (Horizontal)<\/title>\n<style>\n:root{--bg:#070b14;--fg:#eaf4ff;--ac:#7fd4ff;--mu:#7d8ba3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}\n@media (prefers-color-scheme:light){:root:not([data-theme=\"dark\"]){--bg:#070b14;--fg:#eaf4ff}}\nhtml,body{height:100%;margin:0;background:#000;font-family:\"Helvetica Neue\",Arial,sans-serif;color:var(--fg)}\nbody{display:flex;align-items:center;justify-content:center}\n#stage{position:relative;width:min(100vw,177.78vh);aspect-ratio:16/9;container-type:size;background:radial-gradient(circle at 50% 20%,#14223d,var(--bg) 70%);overflow:hidden}\n.snow{position:absolute;inset:0;pointer-events:none}\n.snow i{position:absolute;top:-5%;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.6;animation:fall linear infinite}\n@keyframes fall{to{transform:translateY(115vh)}}\n.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5%;opacity:0;transform:scale(.96);transition:opacity .6s,transform .8s}\n.scene.on{opacity:1;transform:scale(1)}\n.big{font-size:15cqh;font-weight:900;letter-spacing:-1px;line-height:1.05;margin:0}\n.big em{font-style:normal;color:var(--ac)}\n.sm{font-size:3cqh;letter-spacing:.6cqh;color:var(--mu);margin-top:3.5cqh;text-transform:uppercase}\n.list{list-style:none;padding:0;margin:3cqh 0 0;width:100%;text-align:left}\n.scene.row{flex-direction:row;gap:6cqw;text-align:left}.row h2{flex:1}.row .list,.row .grid{flex:1;margin-top:0}\n.list li{display:flex;align-items:center;gap:2cqh;font-size:4.6cqh;font-weight:700;padding:1.6cqh 0;opacity:0;transform:translateX(-20px);transition:.5s}\n.list li b{width:5cqh;height:5cqh;border:2px solid var(--ac);border-radius:7px;display:grid;place-items:center;color:var(--bg);font-size:3.4cqh;transition:.3s}\n.list li.t b{background:var(--ac)}\n.list li.s{opacity:1;transform:none}\n.grid{display:grid;grid-template-columns:1fr 1fr;gap:2cqh;margin-top:3cqh;width:100%}\n.grid div{border:1px solid #27385a;border-radius:14px;padding:3cqh 1cqw;background:#0e1a30;opacity:0;transform:translateY(20px);transition:.6s}\n.grid div.s{opacity:1;transform:none}\n.grid strong{display:block;font-size:7.5cqh;color:var(--ac)}\n.grid span{font-size:2.2cqh;color:var(--mu);letter-spacing:2px;text-transform:uppercase}\n.cta{margin-top:4cqh;padding:2cqh 4cqh;border-radius:40px;background:var(--ac);color:#06101f;font-weight:800;font-size:3.6cqh;word-break:break-all}\n#bar{position:absolute;left:0;bottom:0;height:4px;background:var(--ac);width:0}\n#replay{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;background:#ffffff18;color:#fff;border:0;border-radius:20px;padding:8px 14px;font-size:13px;cursor:pointer}\n#start{position:absolute;inset:0;z-index:5;background:#070bd0;background:rgba(7,11,20,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;cursor:pointer;text-align:center;padding:10%}#start .big{font-size:11cqh}#start button{margin-top:10px;padding:14px 28px;border-radius:40px;border:0;background:var(--ac);color:#06101f;font-weight:800;font-size:18px}#mute{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));left:12px;background:#ffffff18;color:#fff;border:0;border-radius:20px;padding:8px 14px;font-size:13px;cursor:pointer}#cap{position:absolute;left:6%;right:6%;bottom:calc(8% + env(safe-area-inset-bottom,0px));text-align:center;font-size:clamp(13px,3.8vw,17px);font-weight:600;line-height:1.35;color:#fff;text-shadow:0 2px 8px #000;opacity:0;transition:opacity .4s;pointer-events:none}#spd{position:absolute;left:12px;bottom:12px;font-size:13px;color:#fff;background:#ffffff18;padding:6px 12px;border-radius:20px;opacity:0;transition:opacity .25s;pointer-events:none}<\/style><\/head><body>\n<div id=\"stage\">\n<div class=\"snow\" id=\"snow\"><\/div>\n<button id=\"mute\">\ud83d\udd0a Sound on<\/button>\n<div id=\"start\"><h1 class=\"big\">90-Day <em>Winter Arc<\/em><\/h1><p class=\"sm\">Best with sound on<\/p><button>\u25b6 Play ad<\/button><\/div>\n<button id=\"replay\">\u21bb Replay<\/button>\n\n<div class=\"scene\" data-d=\"4000\"><p class=\"sm\">04 Oct 2026<\/p><h1 class=\"big\">Day <em>1<\/em>.<\/h1><p class=\"sm\">Nobody's watching. Start anyway.<\/p><\/div>\n\n<div class=\"scene\" data-d=\"3500\"><h1 class=\"big\">90 days.<br><em>One tracker.<\/em><\/h1><p class=\"sm\">The 90-Day Winter Arc<\/p><\/div>\n\n<div class=\"scene row\" data-d=\"6500\"><h2 class=\"big\" style=\"font-size:11cqh\">Tick it. <em>Every day.<\/em><\/h2>\n<ul class=\"list\" id=\"l1\"><li><b>\u2713<\/b>Breakfast &amp; protein<\/li><li><b>\u2713<\/b>Water 2.5\u20133 L<\/li><li><b>\u2713<\/b>Gym or rest<\/li><li><b>\u2713<\/b>Skin &amp; sleep<\/li><li><b>\u2713<\/b>DSA &amp; career<\/li><\/ul><\/div>\n\n<div class=\"scene row\" data-d=\"5500\"><h2 class=\"big\" style=\"font-size:11cqh\">Your daily <em>targets<\/em><\/h2>\n<div class=\"grid\" id=\"g1\"><div><strong>2,500<\/strong><span>kcal<\/span><\/div><div><strong>100g+<\/strong><span>protein<\/span><\/div><div><strong>2.5\u20133L<\/strong><span>water<\/span><\/div><div><strong>4\u20135\u00d7<\/strong><span>gym / week<\/span><\/div><\/div><\/div>\n\n<div class=\"scene\" data-d=\"4200\"><p class=\"sm\">Streaks \u00b7 Weekly review \u00b7 Weight<\/p><h1 class=\"big\" style=\"margin-top:2cqh\">Watch the grid<br><em>fill up.<\/em><\/h1><p class=\"sm\">Light &amp; dark mode \u00b7 Export / Import<\/p><\/div>\n\n<div class=\"scene\" data-d=\"4800\"><h1 class=\"big\">Consistency<br>over <em>perfection.<\/em><\/h1><p class=\"sm\">Miss a day, never miss twice.<\/p><\/div>\n\n<div class=\"scene\" data-d=\"7000\"><h1 class=\"big\">Day 90<br><em>01 Jan 2027.<\/em><\/h1><p class=\"sm\">Who will you be?<\/p><div class=\"cta\">nimratsingh217.github.io/winter-arc<\/div><\/div>\n\n<div id=\"bar\"><\/div><div id=\"spd\"><\/div>\n<\/div>\n<script>\nconst snow=document.getElementById('snow');\nfor(let i=0;i<40;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.animationDuration=(5+Math.random()*7)+'s';e.style.animationDelay=(-Math.random()*10)+'s';e.style.width=e.style.height=(2+Math.random()*4)+'px';snow.appendChild(e)}\nconst sc=[...document.querySelectorAll('.scene')],bar=document.getElementById('bar');\nconst total=sc.reduce((a,s)=>a+ +s.dataset.d,0);\nconst VO=[\"Day one. Nobody's watching. Start anyway.\",\"Ninety days. One tracker. The Winter Arc.\",\"Tick it. Every single day. Food. Water. Gym. Skin. Sleep. And the work that builds your future.\",\"Twenty-five hundred calories. A hundred grams of protein. Three litres of water. And the gym, four to five times a week.\",\"Watch the grid fill up. Streaks. Weekly reviews. Every day counts.\",\"Consistency... over perfection. Miss a day? Fine. Never miss twice.\",\"Day ninety. The first of January. Who will you be? Start your Winter Arc, today.\"];\nconst TTS=(()=>{try{return typeof speechSynthesis!=='undefined'&&typeof SpeechSynthesisUtterance!=='undefined'}catch(e){return false}})();\nlet timers=[],muted=false,ac=null,master=null,musicTimer=null,voice=null;\n\n/* ---------- VOICE ---------- */\nfunction pickVoice(){\n  if(!TTS)return;try{\n  const v=speechSynthesis.getVoices().filter(x=>/^en/i.test(x.lang));\n  const pref=[/Google UK English Male/i,/Daniel/i,/Aaron/i,/Alex/i,/Arthur/i,/Fred/i,/Rishi/i,/David/i,/Mark/i,/Guy/i,/male/i];\n  for(const r of pref){const f=v.find(x=>r.test(x.name));if(f){voice=f;return}}\n  voice=v[0]||null;\n  }catch(e){}\n}\nif(TTS){try{pickVoice();speechSynthesis.onvoiceschanged=pickVoice}catch(e){}}\nfunction say(txt){}\n\n/* ---------- MUSIC (synthesised: icy cinematic pad + bells + heartbeat) ---------- */\nconst chords=[[57,60,64],[53,57,60],[48,52,55],[55,59,62]]; // Am F C G\nconst hz=m=>440*Math.pow(2,(m-69)/12);\nfunction env(g,t,a,d,pk){g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(pk,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+a+d)}\nfunction pad(notes,t,len){\n  notes.forEach(n=>{[-6,6].forEach(det=>{\n    const o=ac.createOscillator(),f=ac.createBiquadFilter(),g=ac.createGain();\n    o.type='sawtooth';o.frequency.value=hz(n);o.detune.value=det;\n    f.type='lowpass';f.frequency.value=700;\n    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+len*.45);g.gain.linearRampToValueAtTime(0,t+len+.3);\n    o.connect(f);f.connect(g);g.connect(master);o.start(t);o.stop(t+len+.4);\n  })});\n  const b=ac.createOscillator(),bg=ac.createGain();b.type='sine';b.frequency.value=hz(notes[0]-24);\n  bg.gain.setValueAtTime(0,t);bg.gain.linearRampToValueAtTime(.22,t+.8);bg.gain.linearRampToValueAtTime(0,t+len+.3);\n  b.connect(bg);bg.connect(master);b.start(t);b.stop(t+len+.4);\n}\nfunction bell(n,t,v){\n  const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=hz(n);\n  env(g,t,.01,1.4,v);o.connect(g);g.connect(master);g.connect(delayIn);o.start(t);o.stop(t+1.6);\n}\nfunction thump(t,v){\n  const o=ac.createOscillator(),g=ac.createGain();o.type='sine';\n  o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(40,t+.25);\n  env(g,t,.005,.35,v);o.connect(g);g.connect(master);o.start(t);o.stop(t+.5);\n}\nlet delayIn;\nfunction musicStart(){\n  if(muted)return;\n  try{\n  if(!ac)ac=new (window.AudioContext||window.webkitAudioContext)();\n  ac.resume();\n  master=ac.createGain();master.gain.value=0;master.connect(ac.destination);\n  master.gain.linearRampToValueAtTime(.55,ac.currentTime+2);\n  const d=ac.createDelay(1);d.delayTime.value=.375;const fb=ac.createGain();fb.gain.value=.4;\n  delayIn=ac.createGain();delayIn.gain.value=.5;delayIn.connect(d);d.connect(fb);fb.connect(d);d.connect(master);\n  const t0=ac.currentTime+.1,bar=4,beat=.5;let step=0;\n  const sched=()=>{\n    while(true){\n      const t=t0+step*beat*2; // each step = 1s\n      if(t>ac.currentTime+1.5)break;\n      const sec=step,ci=Math.floor(sec/bar)%4,ch=chords[ci];\n      if(sec%bar===0)pad(ch,t,bar);\n      // icy arpeggio (every half-second), enters after 3s\n      if(sec>=3){bell(ch[sec%3]+24,t,.07);bell(ch[(sec+1)%3]+31,t+.5,.045)}\n      // heartbeat enters around the tracker scene, grows toward end\n      if(sec>=7){thump(t,sec>=22?.5:.3);if(sec>=14)thump(t+.5,.18)}\n      // riser into the finale\n      if(sec===27){const o=ac.createOscillator(),g=ac.createGain();o.type='sawtooth';o.frequency.setValueAtTime(200,t);o.frequency.exponentialRampToValueAtTime(1600,t+4);\n        const f=ac.createBiquadFilter();f.type='lowpass';f.frequency.value=2000;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+3.8);g.gain.linearRampToValueAtTime(0,t+4.3);o.connect(f);f.connect(g);g.connect(master);o.start(t);o.stop(t+4.4)}\n      step++;\n    }\n  };\n  sched();musicTimer=setInterval(sched,400);\n  }catch(e){}\n}\nfunction musicStop(){\n  clearInterval(musicTimer);\n  if(master&&ac){const m=master;m.gain.cancelScheduledValues(ac.currentTime);m.gain.setValueAtTime(m.gain.value,ac.currentTime);m.gain.linearRampToValueAtTime(0,ac.currentTime+.8);setTimeout(()=>{try{m.disconnect()}catch(e){}},1000)}\n}\n\n/* ---------- TIMELINE ---------- */\nlet vt=0,ev=[],boost=0,last=0,running=false,mtimers=[];const sp=document.getElementById('spd');\nfunction later(f,t){ev.push({at:vt+t,f:f})}\nfunction raw(f,t){mtimers.push(setTimeout(f,t))}\nfunction tick(now){\n  if(!running)return;\n  const dt=Math.min(100,now-last);last=now;\n  boost*=Math.exp(-dt/350);if(boost<.02)boost=0;\n  vt+=dt*(1+boost);\n  for(let g=0;g<60;g++){\n    let k=-1;for(let i=0;i<ev.length;i++)if(ev[i].at<=vt&&(k<0||ev[i].at<ev[k].at))k=i;\n    if(k<0)break;const e=ev.splice(k,1)[0];e.f();\n  }\n  bar.style.width=Math.min(100,vt/total*100)+'%';\n  sp.textContent='\\u23E9 '+(1+boost).toFixed(1)+'\\u00D7';sp.style.opacity=boost>.3?1:0;\n  requestAnimationFrame(tick)\n}\nfunction play(){\n  ev=[];vt=0;\n  if(TTS)try{speechSynthesis.cancel()}catch(e){}\n  document.querySelectorAll('.s,.t').forEach(e=>e.classList.remove('s','t'));\n  sc.forEach(s=>s.classList.remove('on'));\n  bar.style.transition='none';bar.style.width='0';\n  let t=0;\n  sc.forEach((s,i)=>{\n    later(()=>{sc.forEach(x=>x.classList.remove('on'));s.classList.add('on');\n      later(()=>say(VO[i]),500);\n      if(i==2)document.querySelectorAll('#l1 li').forEach((li,k)=>{later(()=>li.classList.add('s'),k*600);later(()=>li.classList.add('t'),k*600+450)});\n      if(i==3)document.querySelectorAll('#g1 div').forEach((d,k)=>later(()=>d.classList.add('s'),k*600));\n    },t);\n    t+= +s.dataset.d;\n  });\n  later(play,t+1800);\n  if(!running){running=true;last=performance.now();requestAnimationFrame(tick)}\n}\nfunction musicCycle(){\n  mtimers.forEach(clearTimeout);mtimers=[];musicStop();\n  raw(musicStart,80);raw(musicStop,total+300);raw(musicCycle,total+1800);\n}\n/* scroll / swipe = fast-forward the visuals; the music keeps its own normal speed */\naddEventListener('wheel',e=>{boost=Math.min(14,boost+(Math.abs(e.deltaY)+Math.abs(e.deltaX))*.03)},{passive:true});\nlet ty=null;\naddEventListener('touchstart',e=>{ty=e.touches[0].clientY},{passive:true});\naddEventListener('touchmove',e=>{const y=e.touches[0].clientY;if(ty!=null)boost=Math.min(14,boost+Math.abs(y-ty)*.05);ty=y},{passive:true});\naddEventListener('keydown',e=>{if(e.key==='Escape')parent.postMessage('closead','*')});\ndocument.getElementById('replay').onclick=function(){play();musicCycle()};\ndocument.getElementById('mute').onclick=function(){\n  muted=!muted;this.textContent=muted?'\ud83d\udd07 Sound off':'\ud83d\udd0a Sound on';\n  if(muted){if(TTS)try{speechSynthesis.cancel()}catch(e){};musicStop()}else{musicStart()}\n};\ndocument.getElementById('start').onclick=function(){\n  this.remove();\n  try{if(!ac)ac=new (window.AudioContext||window.webkitAudioContext)();ac.resume()}catch(e){}\n  try{pickVoice()}catch(e){}\n  play();musicCycle();\n};\n<\/script>\n<\/body><\/html>\n";
+function openAd(){document.getElementById("adf").srcdoc=ADSRC;document.getElementById("adov").hidden=false}
+function closeAd(){document.getElementById("adov").hidden=true;document.getElementById("adf").srcdoc="<html></html>"}
+document.getElementById("adb").addEventListener("click",openAd);
+document.getElementById("ph-ad").addEventListener("click",openAd);
+document.getElementById("adx").addEventListener("click",closeAd);
+window.addEventListener("message",function(e){if(e.data==="closead")closeAd()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!document.getElementById("adov").hidden)closeAd()});
+
+/* ---------- sound feedback ---------- */
+var AC=null,SND=true;try{SND=localStorage.getItem("wa90snd")!=="0"}catch(x){}
+function tone(f,t,d,v,ty){var o=AC.createOscillator(),g=AC.createGain();o.type=ty||"sine";o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d+.05)}
+function chime(kind){if(!SND)return;try{if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();AC.resume();var t=AC.currentTime;
+ if(kind==="rest")tone(330,t,.5,.08);
+ else if(kind==="full")[523,659,784,1046].forEach(function(f,i){tone(f,t+i*.09,.7,.1,"triangle")});
+ else if(kind==="solid"){tone(659,t,.5,.1,"triangle");tone(880,t+.1,.7,.1,"triangle")}
+ else if(kind==="start"){tone(440,t,.3,.08);tone(660,t+.12,.5,.08)}
+ else if(kind==="stop"){tone(660,t,.3,.08);tone(440,t+.12,.5,.08)}
+ else tone(880,t,.35,.07,"triangle")}catch(x){}}
+function tickSnd(k,v){if(!SND)return;var m=/^d(\d+)-/.exec(k),kind="tick";
+ if(v==="R")kind="rest";
+ else if(m){var n=DN[+m[1]]||0;if(n===12)kind="full";else if(n*100>=THR()*12&&(n-1)*100<THR()*12)kind="solid"}
+ chime(kind)}
+function setSnd(v){SND=v;try{localStorage.setItem("wa90snd",v?"1":"0")}catch(x){}["snd","ph-snd"].forEach(function(i){document.getElementById(i).textContent=v?"🔊":"🔇"})}
+document.addEventListener("change",function(e){var t=e.target;if(t.type==="checkbox"&&t.checked&&t.dataset.k)tickSnd(t.dataset.k,true)});
+["snd","ph-snd"].forEach(function(i){document.getElementById(i).addEventListener("click",function(){setSnd(!SND);if(SND)chime("tick")})});
+setSnd(SND);
+/* ---------- habit ranking ---------- */
+function board(){var el=Math.max(1,Math.min(90,todayIdx())),rows=[];
+ C.forEach(function(c){var n=0;for(var d=1;d<=el;d++)if(S["d"+d+"-"+c[2]])n++;rows.push({l:c[1],p:Math.round(n/el*100)})});
+ rows.sort(function(a,b){return b.p-a.p});
+ var h='';rows.forEach(function(r,i){h+='<div class="lbr"><b>'+(i+1)+'</b><span'+(i?'':' style="font-weight:700"')+'>'+esc(r.l)+'</span><div class="bt"><i style="width:'+r.p+'%;background:var(--c'+(i%5)+')"></i></div><span class="pc">'+r.p+'%</span></div>'});
+ document.getElementById("lb").innerHTML=h;
+ document.getElementById("lbn").textContent="Habits ranked by how often you hit them, days 1–"+el+" so far (rest days count as done).";
+ var lo=rows[rows.length-1];document.getElementById("lbp").innerHTML='Strongest: <b>'+esc(rows[0].l)+'</b> ('+rows[0].p+'%) · Fix first: <b>'+esc(lo.l)+'</b> ('+lo.p+'%)'}
+/* ---------- DSA timer ---------- */
+function dayOfMs(ms){var n=new Date(ms);return Math.floor((new Date(n.getFullYear(),n.getMonth(),n.getDate())-new Date(2026,9,4))/864e5)+1}
+function tsec(d){var v=parseFloat(S["tl"+d]);return isNaN(v)?0:v}
+function fmtH(s){s=Math.floor(s);var h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h?h+"h "+m+"m":m+"m"}
+function z2(n){return n<10?"0"+n:""+n}
+function tmrRender(){var t=Math.max(1,Math.min(90,todayIdx())),rs=S.tr?(Date.now()-S.tr)/1000:0,rd=S.tr?dayOfMs(S.tr):0;
+ function eff(d){return tsec(d)+(rd===d?rs:0)}
+ var x=Math.floor(eff(t));document.getElementById("clk").textContent=z2(Math.floor(x/3600))+":"+z2(Math.floor(x%3600/60))+":"+z2(x%60);
+ var has=tsec(t)>0||rs>0,st=document.getElementById("tst"),ps=document.getElementById("tps");st.textContent=has&&!S.tr?"RESUME":"START";st.disabled=!!S.tr;st.classList.toggle("run",!!S.tr);ps.disabled=!S.tr;
+ var k=t<2?0:Math.min(12,Math.floor((t-2)/7)+1),wk=0,tot=0,best=0;
+ for(var d=1;d<=90;d++){var e=eff(d);tot+=e;if(e>best)best=e;if(k>=1&&d>=2+(k-1)*7&&d<2+k*7)wk+=e}
+ document.getElementById("tmw").textContent=fmtH(wk);document.getElementById("tma").textContent=fmtH(tot);document.getElementById("tmb").textContent=fmtH(best)}
+document.getElementById("tst").addEventListener("click",function(){if(!S.tr){S.tr=Date.now();chime("start");save();tmrRender()}});
+document.getElementById("tps").addEventListener("click",function(){if(S.tr){var d=dayOfMs(S.tr);S["tl"+d]=tsec(d)+(Date.now()-S.tr)/1000;S.tr=0;chime("stop");save();tmrRender()}});
+var rsT=null;
+document.getElementById("trs").addEventListener("click",function(){var b=this;
+ if(!rsT){b.textContent="TAP AGAIN";rsT=setTimeout(function(){rsT=null;b.textContent="RESET"},3000);return}
+ clearTimeout(rsT);rsT=null;b.textContent="RESET";var d=Math.max(1,Math.min(90,todayIdx()));S["tl"+d]=0;if(S.tr&&dayOfMs(S.tr)===d)S.tr=0;chime("stop");save();tmrRender()});
+setInterval(tmrRender,1000);tmrRender();
+document.querySelectorAll(".sbn").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".sbn").forEach(function(x){x.classList.toggle("on",x===b)});document.getElementById("dpp").hidden=b.dataset.s!=="p";document.getElementById("dtm").hidden=b.dataset.s!=="t"})});
+
 syncGrid();
-stats();renderPhone();
+stats();renderPhone();tmrRender();
+try{if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(function(){})}catch(x){}
 </script></body></html>
